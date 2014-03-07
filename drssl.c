@@ -642,7 +642,7 @@ setup_client_ctx(struct sslconn *conn) {
 
     switch (conn->sslversion) {
         case 2:
-            conn->ctx = SSL_CTX_new(SSLv23_method());
+            conn->ctx = SSL_CTX_new(SSLv2_method());
             SSL_CTX_set_options(conn->ctx, SSL_OP_ALL|SSL_OP_NO_SSLv3);
             break;
         case 3:
